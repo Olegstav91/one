@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5bf02f-f408-49d5-a131-2ec5717f1cfb" name="Список изменений" comment="" />
+    <list default="true" id="3b5bf02f-f408-49d5-a131-2ec5717f1cfb" name="Список изменений" comment="">
+      <change beforePath="$PROJECT_DIR$/register.txt" beforeDir="false" afterPath="$PROJECT_DIR$/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +27,10 @@
     "accountId": "bf2dbdb2-22e4-4bd3-a707-fe46bc42d221"
   }
 }]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+    <option name="showPreview" value="true" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
   </component>
