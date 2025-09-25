@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Song Catalog - GuitarVerse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>GuitarVerse</h1>
+            <p>Your source for original guitar songs and lessons.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Song Catalog</a></li>
+                <li><a href="courses.html">Courses & Lessons</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="auth">
+            <a href="login.html">Login</a>
+            <a href="register.html">Register</a>
+        </div>
+    </header>
+
+    <section class="catalog-page">
+        <h2>Song Catalog</h2>
+
+        <div class="filters">
+            <label for="genre">Genre:</label>
+            <select id="genre">
+                <option value="all">All</option>
+                <option value="rock">Rock</option>
+                <option value="pop">Pop</option>
+                <option value="blues">Blues</option>
+                <!-- Add more genres -->
+            </select>
+
+            <label for="difficulty">Difficulty:</label>
+            <select id="difficulty">
+                <option value="all">All</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+            </select>
+        </div>
+
+        <div class="song-list">
+            <!-- Song items will be added dynamically using JavaScript -->
+            </div>
+    </section>
+
+     <footer>
+        <p>&copy; 2025 GuitarVerse. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

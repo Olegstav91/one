@@ -1,0 +1,212 @@
+/* General Styles */
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8; /* Light background */
+    color: #333; /* Dark text */
+}
+
+.button {
+    background-color: #e91e63; /* Pink accent color */
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #c2185b; /* Darker pink on hover */
+}
+
+/* Header */
+header {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+header .logo {
+    text-align: left;
+}
+
+header .logo h1 {
+    margin: 0;
+    color: #e91e63; /* Pink logo */
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+
+header .auth a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+/* Banner */
+.banner {
+    background: linear-gradient(to right, #fce4ec, #f8bbd0); /* Pastel pink gradient */
+    padding: 50px;
+    text-align: center;
+}
+
+.banner h2 {
+    font-size: 2.5em;
+    color: #e91e63;
+    margin-bottom: 10px;
+}
+
+/* Latest Releases & New Lessons */
+.latest-releases, .new-lessons, .recommendations, .search {
+    padding: 30px;
+    text-align: center;
+}
+
+.song-grid, .lesson-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.song-item, .lesson-item {
+    width: 300px;
+    margin: 20px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.song-item img, .lesson-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Search */
+.search form {
+    display: flex;
+    justify-content: center;
+}
+
+.search input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #eee;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+}
+
+footer .social-links img {
+    width: 30px;
+}
+
+/* Catalog Page Styles */
+.catalog-page {
+    padding: 20px;
+}
+
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters label {
+    margin-right: 10px;
+}
+
+.song-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Courses Page Styles */
+.courses-page {
+    padding: 20px;
+}
+
+.course-categories {
+    margin-bottom: 20px;
+}
+
+.course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.course-item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.course-item img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Login/Register Page Styles */
+.login-page, .register-page {
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.login-page h2, .register-page h2 {
+    text-align: center;
+}
+
+.login-page form, .register-page form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-page label, .register-page label {
+    margin-top: 10px;
+}
+
+.login-page input, .register-page input {
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

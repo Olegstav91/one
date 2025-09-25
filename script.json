@@ -1,0 +1,33 @@
+document.addEventListener('DOMContentLoaded', function() {
+    // Example JavaScript (add more interactivity as needed)
+
+    // Form Submission Handling (Login - basic example)
+    const loginForm = document.getElementById('loginForm');
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            //Basic Validation
+            if(!email || !password){
+                alert('Please enter email and password.');
+                return;
+            }
+
+            // In a real application, you would send this data to a server for authentication.
+            // For this example, we'll just display a message.
+            alert('Login attempt with email: ' + email);
+            // You would typically redirect the user upon successful login.
+        });
+    }
+
+     const registerForm = document.getElementById('registerForm');
+        if (registerForm) {
+            registerForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById('name').value;
+                const email = document.getElementById('email').value;
+                const password = document.getElementById('password').value;
