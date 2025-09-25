@@ -5,11 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Песни и уроки на гитаре</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Анимации */
+        .hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Вылет слева */
+        .slide-left {
+            transform: translateX(-100px);
+        }
+
+        .slide-left.show {
+            transform: translateX(0);
+        }
+
+        /* Вылет справа */
+        .slide-right {
+            transform: translateX(100px);
+        }
+
+        .slide-right.show {
+            transform: translateX(0);
+        }
+    </style>
 </head>
 <body>
 
     <!-- Шапка -->
-    <header>
+    <header class="hidden slide-down">
         <div class="logo">
             <h1>GuitarVerse</h1>
             <p>Источник оригинальных песен и уроков игры на гитаре</p>
@@ -19,18 +50,18 @@
                 <li><a href="#">Главная</a></li>
                 <li><a href="catalog.html">Каталог песен</a></li>
                 <li><a href="courses.html">Курсы и уроки</a></li>
-                <li><a href="#">Обо мне</a></li>
+                <li><a href="#">О нас</a></li>
                 <li><a href="#">Контакты</a></li>
             </ul>
         </nav>
         <div class="auth">
             <a href="login.html">Вход</a>
-            <a href="register.html">Регистарция</a>
+            <a href="register.html">Регистрация</a>
         </div>
     </header>
 
     <!-- Баннер -->
-    <section class="banner">
+    <section class="banner hidden slide-right">
         <h2>Открой свой гитарный потенциал</h2>
         <p>Находи авторские песни и занимайся по персональным урокам.</p>
         <a href="catalog.html" class="button">Смотреть песни</a>
@@ -38,23 +69,22 @@
     </section>
 
     <!-- Последние релизы -->
-    <section class="latest-releases">
+    <section class="latest-releases hidden slide-left">
         <h2>Новые песни</h2>
         <div class="song-grid">
-            <!-- Песни (позже подгружаются скриптом или с сервера) -->
-            <div class="song-item">
+            <div class="song-item hidden slide-right">
                 <img src="placeholder-song.jpg" alt="Песня 1">
                 <h3>Название песни 1</h3>
                 <p>Исполнитель: Неизвестен</p>
                 <a href="#" class="button">Подробнее</a>
             </div>
-            <div class="song-item">
+            <div class="song-item hidden slide-left">
                 <img src="placeholder-song.jpg" alt="Песня 2">
                 <h3>Название песни 2</h3>
                 <p>Исполнитель: Неизвестен</p>
                 <a href="#" class="button">Подробнее</a>
             </div>
-            <div class="song-item">
+            <div class="song-item hidden slide-right">
                 <img src="placeholder-song.jpg" alt="Песня 3">
                 <h3>Название песни 3</h3>
                 <p>Исполнитель: Неизвестен</p>
@@ -64,17 +94,16 @@
     </section>
 
     <!-- Новые уроки -->
-    <section class="new-lessons">
+    <section class="new-lessons hidden slide-right">
         <h2>Новые уроки</h2>
         <div class="lesson-grid">
-            <!-- Уроки (будут подгружаться скриптом) -->
-            <div class="lesson-item">
+            <div class="lesson-item hidden slide-left">
                 <img src="placeholder-lesson.jpg" alt="Урок 1">
                 <h3>Гитара для начинающих (для женщин)</h3>
                 <p>Преподаватель: Джейн Доу</p>
                 <a href="#" class="button">Подробнее</a>
             </div>
-             <div class="lesson-item">
+             <div class="lesson-item hidden slide-right">
                 <img src="placeholder-lesson.jpg" alt="Урок 2">
                 <h3>Гитара: уровень «средний»</h3>
                 <p>Преподаватель: Джон Смит</p>
@@ -83,15 +112,14 @@
         </div>
     </section>
 
-    <!-- Рекомендации (для авторизованных пользователей) -->
-    <section class="recommendations">
+    <!-- Рекомендации -->
+    <section class="recommendations hidden slide-left">
         <h2>Рекомендованные песни</h2>
         <p>Войдите в аккаунт, чтобы увидеть персональные подборки!</p>
-        <!-- Здесь позже будут подгружаться рекомендации -->
     </section>
 
     <!-- Поиск -->
-    <section class="search">
+    <section class="search hidden slide-right">
         <h2>Поиск песен</h2>
         <form>
             <input type="text" placeholder="Введите название песни, исполнителя или жанр">
@@ -100,7 +128,7 @@
     </section>
 
     <!-- Подвал -->
-    <footer>
+    <footer class="hidden slide-up">
         <p>&copy; 2025 GuitarVerse. Все права защищены.</p>
         <div class="social-links">
             <a href="#"><img src="facebook-icon.png" alt="Фейсбук"></a>
@@ -108,6 +136,17 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        // Анимации при скролле
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
+    </script>
 </body>
 </html>
